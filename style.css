@@ -18,10 +18,10 @@ body {
 }
 
 .cards-wrapper{
+  min-height: 95vh;
   display: flex;
   align-content: center;
   justify-content: center;
-  margin: 4rem 0 4rem 0;
 }
 
 .card {
@@ -37,18 +37,54 @@ body {
   padding: 1.5rem;
   text-decoration: none;
 
-  box-shadow: 20px;
+  box-shadow: 3px 5px 25px  rgb(12, 12, 12);
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+  background-color: var(--cyan);
+
+  border-radius: 0.7rem;
 }
 
 .card-image {
+  opacity: 1;
   width: 100%;
-  border-radius: 0.5rem;;
+  border-radius: 0.5rem;
+  z-index: 3;
 }
 
+.card-image:hover{
+  z-index: 1;
+  transition: 0.5s ease;
+  opacity: 0.5;
+  
+}
+
+
+.icon-eye{
+  width: 40px;
+  position: fixed;
+  display: flex;
+  align-self: center;
+  z-index: 2;
+  pointer-events: none;
+  
+}
+
+
+
 .title {
+  cursor: pointer;
   color: white;
   font-size: 20px;
   font-weight: 600;
+}
+
+.title:hover {
+  color: var(--cyan);
+  transition: 0.5s ease;
 }
 
 .description {
@@ -99,7 +135,7 @@ hr {
 .avatar img {
   margin-right: 15px;
   border-radius: 50%;
-  border: solid white;
+  border: solid white 1px;
   align-items: center;
   width: 30px;
 }
@@ -111,5 +147,10 @@ hr {
 .creator-name a {
   color: white;
   text-decoration: none;
+}
+
+.creator-name a:hover {
+  transition: 0.5s ease;
+  color: var(--cyan);
 }
 
